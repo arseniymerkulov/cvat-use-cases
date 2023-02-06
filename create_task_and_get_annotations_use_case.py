@@ -1,18 +1,20 @@
 import time
 
 
-from cvat_package.manager import CVATUser, CVATProject, CVATTask, CVATManager
+from cvat_package.manager import CVATUser, CVATOrganization, CVATProject, CVATTask, CVATManager
 
 
 if __name__ == '__main__':
     user = CVATUser('test_user', 'test_password_777')
+    organization = CVATOrganization('test-organization', 'test-org')
     project = CVATProject('test_project', [
         {'name': 'cat'},
         {'name': 'dog'},
     ])
 
-    manager = CVATManager(user, project)
+    manager = CVATManager(user, organization, project)
     manager.recreate_user()
+    manager.recreate_organization()
     manager.recreate_project()
 
     manager.clear_tasks()
