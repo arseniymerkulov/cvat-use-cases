@@ -13,9 +13,6 @@ if __name__ == '__main__':
     email = 'user@mail.com'
     password = 'test_password_1'
 
-    image_1 = 'IMG_2387_jpeg_jpg.rf.09b38bacfab0922a3a6b66480f01b719.jpg'
-    image_2 = 'IMG_2489_jpeg_jpg.rf.ffb357957a29cdef43f3fdfb2a13c417.jpg'
-
     basic_auth = f'{quote(username)}:{quote(email)}:{quote(password)}'
     basic_auth = f'{base64.b64encode(basic_auth.encode()).decode()}'
 
