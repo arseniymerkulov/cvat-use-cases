@@ -8,5 +8,5 @@ Repository contains package for managing CVAT tasks from your code with basic au
 - Creating webhooks for task updates
 - Transferring webhook notification to desirable client via web socket server
 
-Example usage demonstated in ```create_task.py``` file
+Example usage demonstrated in ```create_task.py``` file
   
